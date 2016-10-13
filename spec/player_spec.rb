@@ -21,7 +21,7 @@ describe 'player points' do
     it 'damages the opponent' do
       player1 = Player.new("Kanye")
       player2 = Player.new("Kittens")
-      expect{player1.attack(player2)}.to change {player2.points}.by (-10)
+      expect{player1.receive_hit}.to change {player1.points}.by (-10)
     end
   end
 end

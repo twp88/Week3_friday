@@ -6,10 +6,7 @@ class Player
     @points = DEFAULT_POINTS
   end
 
-  def attack(player)
-    player.receive_hit
+  def receive_hit
+    @points -=10
   end
-    def receive_hit
-      @points -=10
-    end
 end
