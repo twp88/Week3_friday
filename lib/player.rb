@@ -1,5 +1,5 @@
 class Player
-  DEFAULT_POINTS = 10
+  DEFAULT_POINTS = 20
   attr_accessor :name, :points
 
   def initialize(name)
