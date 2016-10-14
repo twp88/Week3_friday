@@ -8,4 +8,8 @@ class Game
   def attack(player)
     player.receive_hit
   end
+
+  def switch_player
+    @players.reverse!
+  end
 end

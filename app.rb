@@ -18,15 +18,15 @@ class Battle < Sinatra::Base
   get '/play' do
     @p1 = $game.players[0]
     @p2 = $game.players[1]
-    @p2points = $game.players[1].points
     erb :play
   end
 
   get '/attack' do
     @p1 = $game.players[0]
     @p2 = $game.players[1]
-    @p2points = $game.players[1].points
     $game.attack(@p2)
+    $game.players[1].points = @p2.points
+    $game.switch_player
     erb :attack
   end
 

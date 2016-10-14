@@ -8,13 +8,3 @@ feature 'Attacks opponent' do
     expect(page).to have_content "Kittens's hp is now 90"
   end
 end
-
-# feature 'Attacks opponent' do
-#   scenario 'and reduces players hp by 10' do
-#     sign_in_and_play
-#     click_button 'Attack!'
-#
-#     end
-#   end
-#
-# end
