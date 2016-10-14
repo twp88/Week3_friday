@@ -27,4 +27,10 @@ describe Game do
     end
   end
 
+  describe "loser" do
+    it "sees if player is the loser" do
+      player1 = Player.new("Kanye")
+      expect(game.loser(player1)).to eq false
+    end
+  end
 end

@@ -24,4 +24,14 @@ describe 'player points' do
       expect{player1.receive_hit}.to change {player1.points}.by (-10)
     end
   end
+
+  describe '#lose' do
+    it 'Lets a player die' do
+      player = Player.new("Kanye")
+      player.points = 0
+      expect(player.receive_hit).to eq false
+end
+
+end
+
 end

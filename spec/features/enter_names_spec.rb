@@ -10,7 +10,7 @@ end
 feature 'Show player 2 points' do
   scenario 'displaying opponent points' do
     sign_in_and_play
-    expect(page).to have_content 'Kittens has 100 points'
+    expect(page).to have_content 'Kittens has 10 points'
     end
   end
 
@@ -19,6 +19,6 @@ feature "lets player switch turns" do
     sign_in_and_play
     click_button 'Attack!'
     click_button 'Back'
-    expect(page).to have_content "Kittens has 90 points"
+    expect(page).to have_content "Kittens has 0 points"
   end
 end

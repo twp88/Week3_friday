@@ -27,7 +27,12 @@ class Battle < Sinatra::Base
     $game.attack(@p2)
     $game.players[1].points = @p2.points
     $game.switch_player
+    redirect to ('/lose') if @p2.points == 0
     erb :attack
+  end
+
+  get '/lose' do
+    erb :lose
   end
 
   # start the server if ruby file executed directly

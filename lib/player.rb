@@ -1,7 +1,7 @@
 class Player
-  DEFAULT_POINTS = 100
+  DEFAULT_POINTS = 10
   attr_accessor :name, :points
-  
+
   def initialize(name)
     @name = name
     @points = DEFAULT_POINTS
@@ -9,5 +9,13 @@ class Player
 
   def receive_hit
     @points -=10
+    dead
   end
+
+private
+  def dead
+    @points == 0
+    #p "#{player} has run out of life. You lose."
+end
+
 end

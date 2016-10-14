@@ -5,6 +5,6 @@ feature 'Attacks opponent' do
     sign_in_and_play
     click_button 'Attack!'
     expect(page).to have_content "Kanye has attacked Kittens!"
-    expect(page).to have_content "Kittens's hp is now 90"
+    expect(page).to have_content "Kittens's hp is now 0"
   end
 end

@@ -9,6 +9,11 @@ class Game
     player.receive_hit
   end
 
+  def loser(player)
+    player.points == 0
+  end
+
+
   def switch_player
     @players.reverse!
   end
