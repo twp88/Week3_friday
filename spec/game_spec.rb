@@ -3,12 +3,7 @@ describe Game do
   subject(:game) {described_class.new("Kanye", "Kittens")}
   # let(:player1) {double "Kanye"}
   # let(:player2) {double "Kittens"}
-
-  describe 'create class variable' do
-    it 'creates an instance of itself' do
-      expect(Game.game("Kanye", "Kittens")).to be_an_instance_of Game
-    end
-  end
+  game.create = game
     describe 'attack' do
       it 'damages the opponent' do
         player1 = Player.new("Kanye")
